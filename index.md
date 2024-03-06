@@ -1,93 +1,123 @@
 ---
-title: About Alembic
+title: Lasso
 feature_text: |
-  ## Alembic
-  A Jekyll boilerplate theme designed to be a starting point for any Jekyll website
+  ## Lasso
+  An Observatorium for the Dynamic Selection, Analysis, and Comparison of Software  
 feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
+excerpt: an Observatorium for the Dynamic Selection, Analysis and Comparison of Software.
 ---
 
-Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get rolling immediately. Install it, configure it, tweak it, push it.
+{% include button.html text="Try it" link="https://softwareobservatorium.github.io/jupyterlab/lab/index.html" color="#0366d6" target="_blank" %}
 
-{% include button.html text="Fork it" icon="github" link="https://github.com/daviddarnes/alembic" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://buymeacoffee.com/daviddarnes#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&via=DavidDarnes" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %}
+LASSO - an Observatorium for the Dynamic Selection, Analysis and Comparison of Software.
 
-## Features
+LASSO's platform enables scalable software code analysis and observation of big code. It provides mass analysis of software code combining dynamic and static program analysis techniques to observe functional (i.e., behavioral) and non-functional properties of software code. It is primarily used to conduct active research in software engineering (contact us), but can also be used by practitioners.
 
-- Available as a **theme gem** and **GitHub Pages** theme
-- Clear and elegant design that can be used out of the box or as solid starting point
-- Tested in all major browsers, including **IE and Edge**
-- Built in **Service Worker** so it can work offline and on slow connections
-- **Configurable colours** and typography in a single settings file
-- Extensive set of **shortcodes** to include various elements; such as buttons, icons, figure images and more
-- Solid **typographic framework** from [Sassline](https://sassline.com/)
-- Configurable navigation via a single file
-- Modular Jekyll components
-- Post category support in the form of a single post index page grouped by category
-- Built in live search using JavaScript
-- **Contact form** built in using [Formspree](https://formspree.io/)
-- Designed with **[Siteleaf](https://www.siteleaf.com/)** in mind
-- Has 9 of the most popular networks as performant sharing buttons
-- Has documentation
+Based on these capabilities, LASSO can be used to realize reusable code analysis services using a dedicated pipeline language, LSL (LASSO Scripting Language). This includes services like -
 
-## Examples
+- code search and retrieval (interface-driven code search, test-driven code search)
+- N-version assessment based on alternative implementations either retrieved via code search or generated using generative AI
+- automated (unit) test generation
+- test-driven software experimentation as a service
+- benchmarking of tools/techniques
+- ...
 
-Here are a few examples of Alembic out in the wild being used in a variety of ways:
+LASSO's core building blocks consist of several well-defined concepts and data structures
 
-- [bawejakunal.github.io](https://bawejakunal.github.io/)
-- [case2111.github.io](https://case2111.github.io/)
-- [karateca.org](https://www.karateca.org/)
+- Sequence Sheet Notation (SSN) - for representing tests (sequences)
+- Stimulus Response Matrices (SRM) - for creating input configurations of system and test pairs, and for storing arbitrary observations (inputs/outputs) once executed by the special test driver for mass execution of code called the arena
+- Stimulus Response Hypercubes - for enabling offline analysis of runtime observations stored in SRMs using popular data analytics tools
 
-## Installation
+The platform is realized in Java using Spring Boot (https://spring.io/projects/spring-boot), while its architecture is realized on top of Apache Ignite (https://ignite.apache.org/). The platform's architecture, therefore, is distributed by design. It follows the manager/worker architecture style. The platform can be accessed via its website (RESTful API) and a webapp GUI.
 
-### Quick setup
+![Alt text](https://github.com/SoftwareObservatorium/lasso/raw/main/doc%2Fimg%2Fquickstart_results.png)
 
-To give you a running start I've put together some starter kits that you can download, fork or even deploy immediately:
+![Alt text](https://github.com/SoftwareObservatorium/lasso/raw/main/doc%2Fimg%2Fquickstart_results_filters.png)
 
-- ⚗️🍨 Vanilla Jekyll starter kit  
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-kit){:style="background: none"}
-- ⚗️🌲 Forestry starter kit  
-  [![Deploy to Forestry](https://assets.forestry.io/import-to-forestry.svg)](https://app.forestry.io/quick-start?repo=daviddarnes/alembic-forestry-kit&engine=jekyll){:style="background: none"}  
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-forestry-kit){:style="background: none"}
-- ⚗️💠 Netlify CMS starter kit  
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-netlifycms-kit&stack=cms){:style="background: none"}
+## There are ways to get started:
 
-- ⚗️:octocat: GitHub Pages with remote theme kit  
-  {% include button.html text="Download kit" link="https://github.com/daviddarnes/alembic-kit/archive/remote-theme.zip" color="#24292e" %}
-- ⚗️🚀 Stackbit starter kit  
-  [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/daviddarnes/alembic-stackbit-kit){:style="background: none"}
+- Get started with our quickstart guide see [quickstart.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fquickstart.md)
+- Read details about LASSO's core concepts, data structures and platform in recent publications (further down)
 
-### As a Jekyll theme
+### Getting Started
 
-1. Add `gem "alembic-jekyll-theme"` to your `Gemfile` to add the theme as a dependancy
-2. Run the command `bundle install` in the root of project to install the theme and its dependancies
-3. Add `theme: alembic-jekyll-theme` to your `_config.yml` file to set the site theme
-4. Run `bundle exec jekyll serve` to build and serve your site
-5. Done! Use the [configuration](#configuration) documentation and the example [`_config.yml`](https://github.com/daviddarnes/alembic/blob/master/_config.yml) file to set things like the navigation, contact form and social sharing buttons
+Read our [quickstart.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fquickstart.md) guide to get started with the LASSO platform.
 
-### As a GitHub Pages remote theme
+### Publications
 
-1. Add `gem "jekyll-remote-theme"` to your `Gemfile` to add the theme as a dependancy
-2. Run the command `bundle install` in the root of project to install the jekyll remote theme gem as a dependancy
-3. Add `jekyll-remote-theme` to the list of `plugins` in your `_config.yml` file
-4. Add `remote_theme: daviddarnes/alembic@main` to your `_config.yml` file to set the site theme
-5. Run `bundle exec jekyll serve` to build and serve your site
-6. Done! Use the [configuration](#configuration) documentation and the example [`_config.yml`](https://github.com/daviddarnes/alembic/blob/master/_config.yml) file to set things like the navigation, contact form and social sharing buttons
+A comprehensive description of LASSO and its core concepts and data structures is provided in
 
-### As a Boilerplate / Fork
+```bash
+@phdthesis{madoc64107,
+           title = {LASSO - an observatorium for the dynamic selection, analysis and comparison of software},
+            year = {2023},
+          author = {Marcus Kessel},
+         address = {Mannheim},
+        language = {Englisch},
+        abstract = {Mining software repositories at the scale of 'big code' (i.e., big data) is a challenging activity. As well as finding a suitable software corpus and making it programmatically accessible through an index or database, researchers and practitioners have to establish an efficient analysis infrastructure and precisely define the metrics and data extraction approaches to be applied. Moreover, for analysis results to be generalizable, these tasks have to be applied at a large enough scale to have statistical significance, and if they are to be repeatable, the artefacts need to be carefully maintained and curated over time. Today, however, a lot of this work is still performed by human beings on a case-by-case basis, with the level of effort involved often having a significant negative impact on the generalisability and repeatability of studies, and thus on their overall scientific value.
 
-_(deprecated, not recommended)_
+The general purpose, 'code mining' repositories and infrastructures that have emerged in recent years represent a significant step forward because they automate many software mining tasks at an ultra-large scale and allow researchers and practitioners to focus on defining the questions they would like to explore at an abstract level. However, they are currently limited to static analysis and data extraction techniques, and thus cannot support (i.e., help automate) any studies which involve the execution of software systems. This includes experimental validations of techniques and tools that hypothesise about the behaviour (i.e., semantics) of software, or data analysis and extraction techniques that aim to measure dynamic properties of software.
 
-1. [Fork the repo](https://github.com/daviddarnes/alembic#fork-destination-box)
-2. Replace the `Gemfile` with one stating all the gems used in your project
-3. Delete the following unnecessary files/folders: `.github`, `LICENSE`, `screenshot.png`, `CNAME` and `alembic-jekyll-theme.gemspec`
-4. Run the command `bundle install` in the root of project to install the jekyll remote theme gem as a dependancy
-5. Run `bundle exec jekyll serve` to build and serve your site
-6. Done! Use the [configuration](#configuration) documentation and the example [`_config.yml`](https://github.com/daviddarnes/alembic/blob/master/_config.yml) file to set things like the navigation, contact form and social sharing buttons
+In this thesis a platform called LASSO (Large-Scale Software Observatorium) is introduced that overcomes this limitation by automating the collection of dynamic (i.e., execution-based) information about software alongside static information. It features a single, ultra-large-scale corpus of executable software systems created by amalgamating existing Open Source software repositories and a dedicated DSL for defining abstract selection and analysis pipelines. Its key innovations are integrated capabilities for searching for selecting software systems based on their exhibited behaviour and an 'arena' that allows their responses to software tests to be compared in a purely data-driven way. We call the platform a 'software observatorium' since it is a place where the behaviour of large numbers of software systems can be observed, analysed and compared.},
+             url = {https://madoc.bib.uni-mannheim.de/64107/}
+}
+```
 
-## Customising
+See [publications.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fpublications.md) for more on LASSO and the platform.
 
-When using Alembic as a theme means you can take advantage of the file overriding method. This allows you to overwrite any file in this theme with your own custom file, by matching the file name and path. The most common example of this would be if you want to add your own styles or change the core style settings.
+## LASSO Scripting Language - Analysis Pipelines
 
-To add your own styles copy the [`styles.scss`](https://github.com/daviddarnes/alembic/blob/master/assets/styles.scss) into your own project with the same file path (`assets/styles.scss`). From there you can add your own styles, you can even optionally ignore the theme styles by removing the `@import "alembic";` line.
+See [pipelines.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fpipelines.md) for a few example LSL pipelines.
 
-If you're looking to set your own colours and fonts you can overwrite them by matching the variable names from the [`_settings.scss`](https://github.com/daviddarnes/alembic/blob/master/_sass/_settings.scss) file in your own `styles.scss`, make sure to state them before the `@import "alembic";` line so they take effect. The settings are a mixture of custom variables and settings from [Sassline](https://medium.com/@jakegiltsoff/sassline-v2-0-e424b2881e7e) - follow the link to find out how to configure the typographic settings.
+## Software Analytics - Analyzing SRMs (Stimulus Response Matrices)
+
+A core design principle of the LASSO platform is to conduct extensive software analytics in external, popular data analytics tools. The platform, therefore, stores tracing data and reports in its distributed database using tabular representations.
+
+Use our jupyterlab playground to explore and manipulate SRMs with Python pandas (https://pandas.pydata.org/)
+
+- https://softwareobservatorium.github.io/jupyterlab/lab/index.html
+
+See [analytics.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fanalytics.md) how resulting SRMs can be analyzed in Python and R.
+
+![Alt text](https://github.com/SoftwareObservatorium/lasso/raw/main/doc%2Fimg%2Fquickstart_jupyterlab.png)
+
+## Distributed Mode - Large scale analysis
+
+The platform is designed to scale software code analysis and observation for big code.
+
+See [distributed.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fdistributed.md) for instructions how to set up a LASSO cluster.
+
+## Development of LASSO
+
+See [development.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fdevelopment.md) for developer details (extension points, system tests etc.).
+
+## Known Issues and Security Concerns
+
+See [known_issues.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fknown_issues.md) for know issues, and [security.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fsecurity.md) for security concerns.
+
+## Lasso Maven Modules
+
+Note: For up-to-date information, have a look at the modules [here](https://github.com/SoftwareObservatorium/lasso/blob/main/pom.xml)
+
+- pom.xml - parent POM of all modules (sets global properties and versions)
+- evosuite-maven-plugin - customized version of EvoSuite's maven plugin
+- randoop-maven-plugin - customized version of a Randoop's maven plugin
+- lasso-maven-extension - LASSO's Maven Spy for maven-based test drivers (reports events etc.)
+- ranking - Ranking module that offers preference-based ranking of software components based on multiple objectives
+- crawler - LASSO's Maven Artifact Crawler
+- analyzer - LASSO's Maven Artifact Analyzer (index creation etc.)
+- index-maven-plugin - LASSO's plug in to index any (built) maven-managed projects
+- core - Core module shared with other LASSO modules (mainly contains common data models, interfaces etc.)
+- lql - LASSO's Query Language (describing interfaces and method signatures)
+- datasource-maven - Query layer for LASSO's executable corpus
+- sandbox - LASSO's sandbox execution environment based on Docker containerization
+- lsl - LASSO's domain language (pipeline language)
+- benchmarks - Temporary module that integrates various (LLM) benchmarks
+- gai - contains interfaces for generative AI (e.g., OpenAI API etc.)
+- engine - LASSO's workflow engine and actions API
+- arena-support - Arena support module (shared classes)
+- arena - LASSO Arena module (arena test driver)
+- worker - LASSO's cluster worker application (web-based using spring-boot)
+- webui - LASSO's next-generation web application based on Angular 16 and Material
+- service - LASSO's cluster service and manager (web-based using spring-boot)
+- lasso-llm - Companion module to benchmarks (facilities to integrate generated code obtained by MultiPL-E experiment)
