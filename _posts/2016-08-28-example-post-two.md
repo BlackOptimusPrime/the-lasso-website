@@ -1,18 +1,34 @@
 ---
-title: History of the Alembic
+title: Lasso Maven Modules
 categories:
 - History
-- External sources
 feature_text: |
-  The History of the Alembic tool
+  lasso modules
 ---
 
-Dioscorides' ambix (described in his De materia medica) is a helmet-shaped lid for gathering condensed mercury. For Athenaeus (~ 225 C.E.) it is a bottle or flask. For later chemists it denotes various parts of crude distillation devices.
+## Lasso Maven Modules
 
-<!-- more -->
+Note: For up-to-date information, have a look at the modules [here](https://github.com/SoftwareObservatorium/lasso/blob/main/pom.xml)
 
-Alembic drawings appear in works of Cleopatra the Alchemist, Synesius, and Zosimos of Panopolis. There were alembics with two (dibikos) and three (tribikos) receivers.[4] According to Zosimos of Panopolis, the alembic was invented by Mary the Jewess.[5]
-
-The anbik is described by Ibn al-Awwam in his Kitab al-Filaha (Book of Agriculture), where he explains how rose-water is distilled. Amongst others, it is mentioned in the Mafatih al-Ulum (Key of Sciences) of Khwarizmi and the Kitab al-Asrar (Book of Secrets) of Al-Razi. Some illustrations occur in the Latin translations of works which are attributed to Geber.[2]
-
-_Originally from [Alembic - Wikipedia](https://en.wikipedia.org/wiki/Alembic)_
+- pom.xml - parent POM of all modules (sets global properties and versions)
+- evosuite-maven-plugin - customized version of EvoSuite's maven plugin
+- randoop-maven-plugin - customized version of a Randoop's maven plugin
+- lasso-maven-extension - LASSO's Maven Spy for maven-based test drivers (reports events etc.)
+- ranking - Ranking module that offers preference-based ranking of software components based on multiple objectives
+- crawler - LASSO's Maven Artifact Crawler
+- analyzer - LASSO's Maven Artifact Analyzer (index creation etc.)
+- index-maven-plugin - LASSO's plug in to index any (built) maven-managed projects
+- core - Core module shared with other LASSO modules (mainly contains common data models, interfaces etc.)
+- lql - LASSO's Query Language (describing interfaces and method signatures)
+- datasource-maven - Query layer for LASSO's executable corpus
+- sandbox - LASSO's sandbox execution environment based on Docker containerization
+- lsl - LASSO's domain language (pipeline language)
+- benchmarks - Temporary module that integrates various (LLM) benchmarks
+- gai - contains interfaces for generative AI (e.g., OpenAI API etc.)
+- engine - LASSO's workflow engine and actions API
+- arena-support - Arena support module (shared classes)
+- arena - LASSO Arena module (arena test driver)
+- worker - LASSO's cluster worker application (web-based using spring-boot)
+- webui - LASSO's next-generation web application based on Angular 16 and Material
+- service - LASSO's cluster service and manager (web-based using spring-boot)
+- lasso-llm - Companion module to benchmarks (facilities to integrate generated code obtained by MultiPL-E experiment)
