@@ -5,9 +5,6 @@ categories:
 feature_text: |
   lasso modules
 ---
-
-## Lasso Maven Modules
-
 Note: For up-to-date information, have a look at the modules [here](https://github.com/SoftwareObservatorium/lasso/blob/main/pom.xml)
 
 - pom.xml - parent POM of all modules (sets global properties and versions)
