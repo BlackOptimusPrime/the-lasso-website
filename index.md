@@ -1,7 +1,7 @@
 ---
 title: Lasso
 feature_text: |
-  ## Lasso
+  Lasso
   An Observatorium for the Dynamic Selection, Analysis, and Comparison of Software  
 feature_image: "https://picsum.photos/1300/400?image=989"
 excerpt: an Observatorium for the Dynamic Selection, Analysis and Comparison of Software.
