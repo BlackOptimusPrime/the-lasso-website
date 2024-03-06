@@ -1,6 +1,6 @@
 ---
 title: 
 layout: categories
-excerpt: "Category index"
+excerpt: 
 aside: true
 ---
