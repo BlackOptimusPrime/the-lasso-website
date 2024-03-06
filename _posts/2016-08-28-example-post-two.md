@@ -1,7 +1,7 @@
 ---
 title: Lasso Maven Modules
 categories:
-- History
+- documentation
 feature_text: |
   lasso modules
 ---
