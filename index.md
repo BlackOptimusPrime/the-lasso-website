@@ -1,15 +1,12 @@
 ---
 title: Lasso
 feature_text: |
-  ## Lasso
   An Observatorium for the Dynamic Selection, Analysis, and Comparison of Software  
 feature_image: "https://picsum.photos/1300/400?image=989"
 excerpt: an Observatorium for the Dynamic Selection, Analysis and Comparison of Software.
 ---
 
 {% include button.html text="Try it" link="https://softwareobservatorium.github.io/jupyterlab/lab/index.html" color="#0366d6" target="_blank" %}
-
-LASSO - an Observatorium for the Dynamic Selection, Analysis and Comparison of Software.
 
 LASSO's platform enables scalable software code analysis and observation of big code. It provides mass analysis of software code combining dynamic and static program analysis techniques to observe functional (i.e., behavioral) and non-functional properties of software code. It is primarily used to conduct active research in software engineering (contact us), but can also be used by practitioners.
 
