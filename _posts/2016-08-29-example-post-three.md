@@ -1,15 +1,17 @@
 ---
 title: Getting Started
 categories:
-- documentation
+- Documentation
 excerpt: |
-  Read our [quickstart.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fquickstart.md) guide to get started with the LASSO platform.
+  Get started with our quickstart guide see [quickstart.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fquickstart.md)
+  Read details about LASSO’s core concepts, data structures and platform in recent publications (further down)
 feature_text: |
-  ## Getting Started
-  lasso lasso lasso
+  ## Lasso
+  An Observatorium for the Dynamic Selection, Analysis and Comparison of Software
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 ---
+
 
 Read our [quickstart.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fquickstart.md) guide to get started with the LASSO platform.
 
