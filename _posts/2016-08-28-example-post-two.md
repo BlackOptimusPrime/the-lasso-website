@@ -3,7 +3,7 @@ title: Lasso Maven Modules
 categories:
 - Documentation
 excerpt: |
-Note: For up-to-date information, have a look at the modules [here](https://github.com/SoftwareObservatorium/lasso/blob/main/pom.xml)
+  Note: For up-to-date information, have a look at the modules [here](https://github.com/SoftwareObservatorium/lasso/blob/main/pom.xml)
 feature_text: |
   lasso modules
 ---
