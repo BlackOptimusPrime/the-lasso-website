@@ -1,9 +1,9 @@
 ---
 title: Getting Started
 categories:
-- General
+- documentation
 excerpt: |
-  First steps.
+  Read our [quickstart.md](https://github.com/SoftwareObservatorium/lasso/blob/main/doc%2Fquickstart.md) guide to get started with the LASSO platform.
 feature_text: |
   ## Getting Started
   lasso lasso lasso
